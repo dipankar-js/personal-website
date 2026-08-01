@@ -77,17 +77,17 @@ export function Experience() {
 
 function ExperienceItem({ role, last }: { role: Role; last: boolean }) {
   return (
-    <article className={`grid grid-cols-[22px_minmax(0,1fr)] py-5 sm:grid-cols-[140px_30px_minmax(0,1fr)] md:grid-cols-[170px_30px_minmax(0,1fr)] md:py-1 ${last ? "pb-[60px]" : "pb-[30px]"}`}>
-      <div className="col-start-2 mb-4 font-sans sm:col-start-1 sm:mb-0 sm:pr-5 sm:pt-1.5 sm:text-right md:pr-7">
+    <article data-reveal className={`grid grid-cols-[22px_minmax(0,1fr)] py-5 sm:grid-cols-[140px_30px_minmax(0,1fr)] md:grid-cols-[170px_30px_minmax(0,1fr)] md:py-1 ${last ? "pb-[60px]" : "pb-[30px]"}`}>
+      <div className="timeline-date col-start-2 mb-4 font-sans sm:col-start-1 sm:mb-0 sm:pr-5 sm:pt-1.5 sm:text-right md:pr-7">
         <div className="text-[13px] font-semibold text-foreground">{role.dates}</div>
         <div className="mt-1.5 text-xs text-muted">{role.location}</div>
         {role.current && <span className="mt-3.5 inline-block rounded-full bg-[#f1e4d4] px-2.5 py-1 text-[10px] font-semibold tracking-[0.1em] text-accent-dark uppercase">Current</span>}
       </div>
       <div className="relative row-span-2 row-start-1 flex justify-center sm:col-start-2 sm:row-span-1">
-        <div className={`absolute top-[-4px] left-1/2 w-px bg-border ${last ? "h-[23px]" : "bottom-[-30px]"}`} />
-        <div className={`absolute top-3 size-[13px] rounded-full border-2 border-accent shadow-[0_0_0_5px_#f7f5f1] ${role.current ? "bg-accent" : "bg-background"}`} />
+        <div className={`timeline-line absolute top-[-4px] left-1/2 w-px bg-border ${last ? "h-[23px]" : "bottom-[-30px]"}`} />
+        <div className={`timeline-dot absolute top-3 size-[13px] rounded-full border-2 border-accent shadow-[0_0_0_5px_#f7f5f1] ${role.current ? "timeline-dot-current bg-accent" : "bg-background"}`} />
       </div>
-      <div className="col-start-2 min-w-0 pb-1.5 sm:col-start-3 sm:pl-7">
+      <div className="timeline-content col-start-2 min-w-0 pb-1.5 sm:col-start-3 sm:pl-7">
         <h3 className="m-0 mb-1 font-sans text-[30px] leading-tight font-semibold tracking-[-0.025em] text-foreground">{role.company}</h3>
         <div className="mb-3.5 font-sans text-base font-medium text-accent">{role.title}</div>
         <p className="m-0 mb-5 max-w-[800px] text-[17px] leading-[27px] text-[#4a4740]">{role.summary}</p>

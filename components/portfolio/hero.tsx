@@ -11,18 +11,18 @@ export function Hero() {
   return (
     <section id="top" className="border-b border-border px-5 pt-16 md:px-8 md:pt-[84px]">
       <div className="mx-auto max-w-[1180px]">
-        <div className="mb-[30px] font-sans text-[11px] font-medium tracking-[0.16em] text-accent uppercase">
+        <div className="page-load-item page-load-1 mb-[30px] font-sans text-[11px] font-medium tracking-[0.16em] text-accent uppercase">
           Bengaluru, India · Remote at Deel · Open to senior &amp; staff roles
         </div>
-        <h1 className="balance m-0 max-w-[1000px] font-sans text-[clamp(38px,5.2vw,74px)] leading-[1.06] font-semibold tracking-[-0.028em] text-foreground">
+        <h1 className="page-load-item page-load-2 balance m-0 max-w-[1000px] font-sans text-[clamp(38px,5.2vw,74px)] leading-[1.06] font-semibold tracking-[-0.028em] text-foreground">
           Senior full-stack engineer building scalable platforms for products used at global scale.
         </h1>
         <div className="pb-[60px]">
-          <p className="pretty my-[30px] max-w-[760px] text-xl leading-[34px] text-[#3b3934]">
+          <p className="page-load-item page-load-3 pretty my-[30px] max-w-[760px] text-xl leading-[34px] text-[#3b3934]">
             Product engineer with 6+ years shipping production-grade applications using React, Next.js, TypeScript, Node.js, and NestJS.<br />
             Currently at <Mark>Deel</Mark>, building scalable global payroll onboarding experiences and the services behind them.<br />
           </p>
-          <div className="flex flex-wrap items-center gap-2.5">
+          <div className="page-load-item page-load-4 flex flex-wrap items-center gap-2.5">
             <ButtonLink href="mailto:barman498@gmail.com" className="h-12 px-6">
               <MailIcon className="size-[18px]" />
               Get in touch

@@ -26,7 +26,7 @@ export function Education() {
 
 function InfoCard({ title, className = "", children }: { title: string; className?: string; children: React.ReactNode }) {
   return (
-    <article className={`rounded border border-border bg-[#fdfcfa] p-7 ${className}`}>
+    <article data-reveal className={`rounded border border-border bg-[#fdfcfa] p-7 transition duration-200 hover:-translate-y-1 hover:border-[#cfc9be] hover:shadow-[0_12px_30px_-24px_rgba(22,24,29,0.5)] ${className}`}>
       <div className="eyebrow mb-5 text-accent">{title}</div>
       {children}
     </article>

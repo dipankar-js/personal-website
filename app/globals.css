@@ -76,6 +76,113 @@ a {
   text-wrap: pretty;
 }
 
+@keyframes header-enter {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-load-header {
+  animation: header-enter 600ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.page-load-item {
+  animation: page-enter 750ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.page-load-1 {
+  animation-delay: 100ms;
+}
+
+.page-load-2 {
+  animation-delay: 180ms;
+}
+
+.page-load-3 {
+  animation-delay: 280ms;
+}
+
+.page-load-4 {
+  animation-delay: 380ms;
+}
+
+.motion-ready [data-reveal] {
+  opacity: 0;
+  filter: blur(3px);
+  clip-path: inset(0 0 8% 0);
+  transition:
+    opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 700ms cubic-bezier(0.22, 1, 0.36, 1),
+    clip-path 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.motion-ready [data-reveal][data-visible="true"] {
+  opacity: 1;
+  filter: blur(0);
+  clip-path: inset(0);
+}
+
+.motion-ready [data-reveal] .timeline-line {
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 850ms cubic-bezier(0.22, 1, 0.36, 1) 100ms;
+}
+
+.motion-ready [data-reveal] .timeline-dot {
+  opacity: 0;
+  transform: scale(0.45);
+  transition:
+    opacity 300ms ease 180ms,
+    transform 500ms cubic-bezier(0.34, 1.56, 0.64, 1) 180ms;
+}
+
+.motion-ready [data-reveal] .timeline-date,
+.motion-ready [data-reveal] .timeline-content {
+  opacity: 0;
+  transition:
+    opacity 550ms ease 160ms,
+    transform 650ms cubic-bezier(0.22, 1, 0.36, 1) 160ms;
+}
+
+.motion-ready [data-reveal] .timeline-date {
+  transform: translateX(-14px);
+}
+
+.motion-ready [data-reveal] .timeline-content {
+  transform: translateX(14px);
+}
+
+.motion-ready [data-reveal][data-visible="true"] .timeline-line {
+  transform: scaleY(1);
+}
+
+.motion-ready [data-reveal][data-visible="true"] .timeline-dot {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.motion-ready [data-reveal][data-visible="true"] .timeline-date,
+.motion-ready [data-reveal][data-visible="true"] .timeline-content {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 @media (max-width: 767px) {
   .page-container {
     padding-inline: 20px;
@@ -92,5 +199,24 @@ a {
   *::after {
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .page-load-header,
+  .page-load-item {
+    animation: none;
+  }
+
+  [data-reveal] {
+    opacity: 1 !important;
+    filter: none !important;
+    clip-path: none !important;
+  }
+
+  .timeline-line,
+  .timeline-dot,
+  .timeline-date,
+  .timeline-content {
+    opacity: 1 !important;
+    transform: none !important;
   }
 }

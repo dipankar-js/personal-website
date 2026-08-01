@@ -22,7 +22,7 @@ export function Highlights() {
     <section className="overflow-hidden bg-ink">
       <div className="page-container">
         <div className="grid lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
-          <div className="border-[#2b2e36] py-10 lg:border-r lg:py-[50px] lg:pr-10">
+          <div data-reveal className="border-[#2b2e36] py-10 lg:border-r lg:py-[50px] lg:pr-10">
             <div className="flex items-center gap-4 sm:gap-6">
               <div className="shrink-0 font-sans text-[clamp(88px,11vw,148px)] leading-[0.82] font-semibold tracking-[-0.05em] text-transparent [-webkit-text-stroke:2px_#c88a54]">6+</div>
               <div>
@@ -38,7 +38,7 @@ export function Highlights() {
               <Badge className="mt-[22px] border-0 bg-[#c88a54] px-[15px] py-2 text-xs font-semibold tracking-[0.1em] text-ink uppercase">Open to senior &amp; staff roles</Badge>
             </div>
           </div>
-          <div className="border-t border-[#2b2e36] py-7 lg:border-0 lg:py-[28px] lg:pl-12">
+          <div data-reveal className="border-t border-[#2b2e36] py-7 lg:border-0 lg:py-[28px] lg:pl-12">
             {highlights.map(({ label, content }, index) => (
               <div key={label} className={`grid gap-2 py-[22px] sm:grid-cols-[128px_minmax(0,1fr)] sm:gap-[22px] ${index ? "border-t border-[#2b2e36]" : ""}`}>
                 <div className="eyebrow pt-1 text-[#c88a54]">{label}</div>
