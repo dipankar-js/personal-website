@@ -3,7 +3,7 @@ import { SectionHeading } from "./section-heading";
 
 const groups: Array<{ label: string; items: string[]; featured: string[] }> = [
   { label: "Frontend", items: ["JavaScript", "TypeScript", "React", "Next.js", "Redux", "Angular 8", "React Native", "Tailwind"], featured: ["TypeScript", "React", "Next.js"] },
-  { label: "Backend & data", items: ["Node.js", "NestJS microservices", "Express", "GraphQL", "MongoDB", "Firebase"], featured: ["NestJS microservices"] },
+  { label: "Backend & data", items: ["Node.js", "NestJS microservices", "Express", "GraphQL", "PostgreSQL", "MongoDB", "Firebase"], featured: ["NestJS microservices"] },
   { label: "Platform & delivery", items: ["Nx monorepos", "CI/CD · CircleCI", "AWS", "Serverless", "Lambda + API Gateway", "Playwright"], featured: ["Nx monorepos"] },
 ];
 

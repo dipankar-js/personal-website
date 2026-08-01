@@ -18,8 +18,9 @@ export function Hero() {
           Senior full-stack engineer building scalable platforms for products used at global scale.
         </h1>
         <div className="pb-[60px]">
-          <p className="pretty my-[30px] max-w-[660px] text-xl leading-[34px] text-[#3b3934]">
-            Six-plus years across the whole stack — React and Next.js on the front, Node, NestJS and MongoDB behind it. Global payroll onboarding at <Mark>Deel</Mark>, dealership analytics at <Mark>Tekion</Mark>, and a US residential-solar platform I led end to end at <Mark>Better Software</Mark>. My work lands in the load-bearing places: monorepo and microservice architecture, CI, and self-serve flows that remove manual operational work.
+          <p className="pretty my-[30px] max-w-[760px] text-xl leading-[34px] text-[#3b3934]">
+            Product engineer with 6+ years shipping production-grade applications using React, Next.js, TypeScript, Node.js, and NestJS.<br />
+            Currently at <Mark>Deel</Mark>, building scalable global payroll onboarding experiences and the services behind them.<br />
           </p>
           <div className="flex flex-wrap items-center gap-2.5">
             <ButtonLink href="mailto:barman498@gmail.com" className="h-12 px-6">
